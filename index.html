@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Saad Alhazmi">
+    <meta name="description" content="This page is applying skills I'm learning">
+    <title>New account</title>
+    <link rel="icon" href="html-5-logo.png" type="image/x">
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <style>
+        h1 {
+            color: rgb(255, 255, 255);
+        }
+
+        fieldset {
+            color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Create a new account</h1>
+    <hr>
+
+    <center>
+        <fieldset>Username <input type="email" id="username"></fieldset>
+    </center>
+    <hr>
+
+    <center>
+        <fieldset>Password <input type="password" id="password"></fieldset>
+        <button onclick="submitAndRedirect()">Submit</button>
+    </center>
+
+    <script>
+        function submitAndRedirect() {
+            var usernameInput = document.getElementById("username").value;
+            var passwordInput = document.getElementById("password").value;
+
+            // Replace these hardcoded values with your actual authentication logic
+            var correctUsername = "gglukaka11";
+            var correctPassword = "dedlukaka11";
+
+            if (usernameInput === correctUsername && passwordInput === correctPassword) {
+                window.open("dashboard.html", "_self");
+            } else {
+                alert("Retry: Wrong username or password.");
+            }
+        }
+    </script>
+</body>
+
+</html>
