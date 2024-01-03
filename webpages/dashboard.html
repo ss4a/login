@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Saad Alhazmi">
+    <meta name="description" content="This page is applying skills I'm learning">
+    <title>Dashboard</title>
+    <link rel="icon" href="html-5-logo.png" type="image/x">
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <style>
+        body {
+            background-color: #1f1f1f;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-bottom: 20px;
+        }
+
+        h1, h4, h6 {
+            color: #ffffff;
+            text-align: center;
+            margin: 0;
+        }
+
+        fieldset {
+            border: 2px solid #398e7a;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+            background-color: #2b2b2b;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            box-sizing: border-box;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #398e7a;
+            margin: 10px 0;
+        }
+
+        h6 {
+            font-size: large;
+        }
+
+        button {
+            background-color: #398e7a;
+            color: #ffffff;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:disabled {
+            background-color: #7f7f7f;
+            cursor: not-allowed;
+        }
+        h5{
+            font:caption;
+        }
+
+        /* Add any additional styles as needed */
+        img {
+    align-items: flex-end;
+    width: 50px; 
+    height: auto; 
+}
+
+    </style>
+</head>
+
+<body>
+    <img src="user.png" alt="profilepic">
+    <a>Welcome back!</a>
+    <h1><fieldset>Dashboard</fieldset></h1>
+    <h4><fieldset>Select your server</fieldset></h4>
+    <h5>🟢= Server Online,🔴= Server Offline</h5>
+    <h6>
+        <fieldset>
+            Server 1: <span id="server1">40</span>/40 🟢 <button onclick="joinServer(1)">Join</button>
+            <hr>
+            Server 2: <span id="server2">23</span>/40 🟢 <button onclick="joinServer(2)">Join</button>
+            <hr>
+            Server 3: 0 🔴 <button disabled>Locked</button>
+        </fieldset>
+    </h6>
+
+    <script>
+        function joinServer(serverNumber) {
+            // Placeholder for the join functionality
+            console.log("Joining Server " + serverNumber);
+            // You can add your join logic here
+        }
+
+        // Simulate dynamic numbers for servers 1 and 2
+        setInterval(function () {
+            document.getElementById('server1').textContent = Math.floor(Math.random() * 41);
+            document.getElementById('server2').textContent = Math.floor(Math.random() * 41);
+        }, 5000); // Update every 5 seconds
+    </script>
+</body>
+
+</html>
